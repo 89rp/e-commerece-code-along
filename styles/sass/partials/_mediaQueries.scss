@@ -76,6 +76,22 @@
     }
 }
 
+/* mediaQueries.scss */
+
+@media (max-width: 1000px){
+    /* previous styles here */
+
+    .mapFormContainer {
+        .map{
+            width: 45%;
+        }
+    }
+    .contactForm{
+        width: calc(55% - 50px); 
+        margin-left: 50px;
+    }
+}
+
 
 @media (max-width: 800px){
     /* previous styles here */
@@ -91,5 +107,15 @@
     .contactForm{
         width: 85%;
         margin-left: 0;
+    }
+}
+
+@media (max-width: 500px){
+    /* previous styles here */
+
+    .mapFormContainer {
+        .map {
+            width: 100%;
+        }
     }
 }
