@@ -75,3 +75,21 @@
         }
     }
 }
+
+
+@media (max-width: 800px){
+    /* previous styles here */
+
+    .mapFormContainer{
+        flex-direction: column;
+        align-items: center;
+        .map{
+            margin-bottom: 50px;
+            width: 85%;
+        }
+    }
+    .contactForm{
+        width: 85%;
+        margin-left: 0;
+    }
+}

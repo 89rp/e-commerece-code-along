@@ -575,6 +575,28 @@ header .headerContent .contentContainer {
   width: 65%;
 }
 
+.contactHeader {
+  background-color: #fff5f5;
+  padding-top: 120px;
+}
+.contactHeader .contactContent {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.contactHeader::after {
+  content: "";
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/wave.svg);
+  background-color: #fff5f5;
+  background-repeat: no-repeat;
+  background-size: 100% 150px;
+}
+
 /* _footer.scss */
 footer {
   background-color: #084b6d;
@@ -687,6 +709,111 @@ footer .social a:hover, footer .social a:focus {
   display: block;
 }
 
+/* forms.scss */
+.mapFormContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mapFormContainer .map {
+  width: 50%;
+}
+.mapFormContainer .map iframe {
+  width: 100%;
+}
+
+/* forms.scss */
+.contactForm {
+  width: calc(50% - 70px);
+  margin-left: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+input,
+textarea {
+  padding: 0 0 10px 5px;
+  border: none;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: "Jakarta Sans";
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+input::placeholder,
+textarea::placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+input:focus,
+textarea:focus {
+  border-bottom: 1px solid #084b6d;
+}
+
+input {
+  border-bottom: 1px solid #eee;
+}
+
+textarea {
+  min-height: 130px;
+  border: 1px solid #eee;
+  border-top: none;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: "Jakarta Sans";
+  color: #084b6d;
+  padding: 0 0 10px 0;
+  border: none;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+option {
+  font-family: "Jakarta Sans", sans-serif;
+}
+
 /* _mediaQueries.scss */
 @media (max-width: 1000px) {
   /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
@@ -759,5 +886,26 @@ footer .social a:hover, footer .social a:focus {
   }
   footer .socialIcons {
     margin-bottom: 30px;
+  }
+}
+@media (max-width: 800px) {
+  /* previous styles here */
+  .mapFormContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mapFormContainer .map {
+    margin-bottom: 50px;
+    width: 85%;
+  }
+
+  .contactForm {
+    width: 85%;
+    margin-left: 0;
   }
 }
